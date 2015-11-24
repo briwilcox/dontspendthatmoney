@@ -16,6 +16,20 @@
     <script src="bootstrap/html5shiv.js"></script>
     <script src="bootstrap/respond.min.js"></script>
     <![endif]-->
+
+    <script src="js/scripts/cost_functions.js"></script>
+    <script language="javascript" type="text/javascript">
+        function calcFunct() {
+            var income = document.getElementById('income').value;
+            var itax = document.getElementById('itax').value;
+            var stax = document.getElementById('stax').value;
+            var weeksoff = document.getElementById('weeksoff').value;
+            var price = document.getElementById('price').value;
+            var priceindays = priceInDays(parseInt(income), parseInt(price), parseInt(stax), parseInt(itax), parseInt(weeksoff));
+            document.getElementById("demo").innerHTML = String(priceindays);
+        }
+    </script>
+
 </head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top">
@@ -88,7 +102,46 @@
                 <div class="jumbotron">
                     <h2>True Cost Calculator</h2>
 
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="income" class="col-lg-2 control-label">Annual Salary</label>
 
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="income" placeholder="Income" required>
+                                </div>
+                                <label for="itax" class="col-lg-2 control-label">Income Tax</label>
+
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="itax" placeholder="Income Tax" required>
+                                </div>
+                                <label for="stax" class="col-lg-2 control-label">Sales Tax</label>
+
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="stax" placeholder="Sales Tax" required>
+                                </div>
+                                <label for="weeksoff" class="col-lg-2 control-label">Weeks Off</label>
+
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="weeksoff"
+                                           placeholder="Weeks off per year" required>
+                                </div>
+                                <label for="price" class="col-lg-2 control-label">Price of Item</label>
+
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="price" placeholder="Price of Item"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-10 col-lg-offset-2">
+                                    <button type="button" class="btn btn-default">Cancel</button>
+                                    <button type="button" onclick="calcFunct()" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <p id="demo"></p>
                 </div>
             </div>
         </div>
