@@ -111,20 +111,19 @@
 
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Menu <span
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="menu">Menu <span
                             class="caret"></span></a>
-                    <ul class="dropdown-menu" aria-labelledby="themes">
-                        <li><a href="#">What Is This?</a></li>
+                    <ul class="dropdown-menu" aria-labelledby="menu">
+                        <li><a href="#about">What Is This?</a></li>
                         <li class="divider"></li>
                         <li><a href="#calc">The Calculator</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">More Details</a></li>
+                        <li><a href="#results">Results</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Contact Me</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#disclaimer">Disclaimer</a></li>
                     </ul>
-                </li>
-                <li>
-                    <a href="#">Themes</a>
                 </li>
             </ul>
 
@@ -156,16 +155,15 @@
                                     data-toggle="popover" data-placement="bottom"
                                     data-content="Before your next purchase run your info through this calculator to
                                        figure out what it really costs once you consider the amount of time you spent
-                                       working for it including income and sales tax.">Learn more
+                                       working including income and sales tax.">Learn more
                             </button>
-                            <a type="button" onclick="scrollToCalc()" class="btn btn-success btn-lg">Find Out</a>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="calc">
                 <div class="jumbotron">
-                    <h2 id="calc">True Cost Calculator</h2>
+                    <h2>True Cost Calculator</h2>
 
                     <div id="horrible_error" class="alert alert-dismissable alert-danger" style="display: none;">
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -231,7 +229,7 @@
             </div>
         </div>
         <!-- Results -->
-        <div class="page-header">
+        <div class="page-header" id="results">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 id="results">Results</h1>
@@ -378,7 +376,7 @@
 
         <!-- About
         ================================================== -->
-        <div class="row">
+        <div class="row" id="about">
             <div class="col-lg-12">
                 <div class="page-header">
                     <h1 id="type">About</h1>
@@ -396,14 +394,18 @@
                     <b><a href="https://en.wikipedia.org/wiki/Real_versus_nominal_value_(economics)">real</a></b>
                     terms. This is where the thing being discussed is adjusted to inflation, but people usually don't
                     think in terms of <b><a href="https://en.wikipedia.org/wiki/Opportunity_cost">opportunity costs</a></b>.
-                    Now you can!</p> <p>What is opportunity cost? The textbook definition from Google is: "the loss of
+                    Now you can!</p>
+
+                <p>What is opportunity cost? The textbook definition from Google is: "the loss of
                     potential gain from other alternatives when one alternative is chosen".</p>
             </div>
             <div class="col-lg-4">
                 <h2>Opportunity Cost: Investing</h2>
 
                 <p>Every dollar you spend today is a dollar less you have to spend tomorrow. In the context of
-                    investments every dollar you spend is a dollar you cannot spent or invest tomorrow.</p> <p>This site
+                    investments every dollar you spend is a dollar you cannot spent or invest tomorrow.</p>
+
+                <p>This site
                     will show you what a purchase historically* would have been worth if invested over certain time
                     frames in different assets. The point of this is not to recommend one or any investment, just to
                     illustrate the possible opportunity costs of spending today.</p>
@@ -412,7 +414,9 @@
                 <h2>Opportunity Cost: Working</h2>
 
                 <p>Additionally if you work for a living every dollar you spend has a different type of <b>real</b>
-                    cost: your time.</p> <p>Assuming all your financial wealth comes from working it is possible to calculate exactly
+                    cost: your time.</p>
+
+                <p>Assuming all your financial wealth comes from working it is possible to calculate exactly
                     how much time it takes for you to earn enough to buy something. The results may surprise you!</p>
             </div>
 
@@ -420,7 +424,7 @@
 
         <!-- Contact
         ================================================== -->
-        <div class="row">
+        <div class="row" id="contact">
             <div class="col-lg-12">
                 <div class="page-header">
                     <h1 id="type">Contact</h1>
@@ -434,14 +438,16 @@
             <div class="col-lg-12">
                 <h2>Contact me</h2>
 
-                <p></p>
+                <p>
+                    <a href="http://www.google.com/recaptcha/mailhide/d?k=01hZ4NWACjyWHwaZE5Sokv1g==&c=1R97QbiCO_lJ93EBMK8Tr75eIaTbVB2_S30nY6uj1oQ=">Click
+                        here</a> to reveal the original author's / website maintainer's email address.</p>
             </div>
 
         </div>
 
         <!-- Disclaimer
         ================================================== -->
-        <div class="row">
+        <div class="row" id="disclaimer">
             <div class="col-lg-12">
                 <div class="page-header">
                     <h1 id="type">Disclaimer</h1>
@@ -454,11 +460,30 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2>Obligatory Disclaimer</h2>
+
                 <p>By accessing this website you agree to all of the following:</p>
-                <p>DontSpendThatMoney.com is not a Registered Investment Advisor, Broker/Dealer, Financial Analyst, Financial Bank, Securities Broker or Financial Planner. The Information on the Site is provided for information purposes only. The Information is not intended to be and does not constitute financial advice or any other advice, is general in nature and not specific to you. Before using DontSpendThatMoney.com’s information to make an investment decision, you should seek the advice of a qualified and registered securities professional and undertake your own due diligence. None of the information on our Site is intended as investment advice, as an offer or solicitation of an offer to buy or sell, or as a recommendation, endorsement, or sponsorship of any security, Company, or fund. DontSpendThatMoney.com, it's owners, and contributors are not responsible for any investment decision made by you. You are responsible for your own investment research and investment decisions.
-                </p><p>This website is free open source software. By accessing this website you agree with the <a href="https://raw.githubusercontent.com/briwilcox/dontspendthatmoney/master/LICENSE">license found here.</a></p>
+
+                <p>DontSpendThatMoney.com is not a Registered Investment Advisor, Broker/Dealer, Financial Analyst,
+                    Financial Bank, Securities Broker or Financial Planner. The Information on the Site is provided for
+                    information purposes only. The Information is not intended to be and does not constitute financial
+                    advice or any other advice, is general in nature and not specific to you. Before using
+                    DontSpendThatMoney.com’s information to make an investment decision, you should seek the advice of a
+                    qualified and registered securities professional and undertake your own due diligence. None of the
+                    information on our Site is intended as investment advice, as an offer or solicitation of an offer to
+                    buy or sell, or as a recommendation, endorsement, or sponsorship of any security, Company, or fund.
+                    DontSpendThatMoney.com, it's owners, and contributors are not responsible for any investment
+                    decision made by you. You are responsible for your own investment research and investment decisions.
+                </p>
+
+                <p>This website is free open source software. By accessing this website you agree with the <a
+                        href="https://raw.githubusercontent.com/briwilcox/dontspendthatmoney/master/LICENSE">license
+                    found here.</a></p>
+
                 <h2>Source of historical geometric returns</h2>
-                <p>Data used for return assumptions can be <a href="http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html">found here.</a></p>
+
+                <p>Data used for return assumptions can be <a
+                        href="http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html">found
+                    here.</a></p>
             </div>
         </div>
 
