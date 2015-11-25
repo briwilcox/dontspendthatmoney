@@ -30,8 +30,9 @@ function salaryToTime(adjustedIncome, timeOffInWeeks) {
      */
     adjustedIncome = parseFloat(adjustedIncome);
     timeOffInWeeks = parseFloat(timeOffInWeeks);
-    var timeWorked = (20 * 12) - (52 - timeOffInWeeks);
-    var payPerDay = adjustedIncome / timeWorked;
+    var weeksworked = 52 - timeOffInWeeks; // 52 Weeks in a year minus weeks off
+    var timeWorkedInDays = weeksworked * 5; //Five work days in a week
+    var payPerDay = adjustedIncome / timeWorkedInDays;
     return payPerDay;
 }
 
