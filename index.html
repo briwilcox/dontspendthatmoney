@@ -34,6 +34,11 @@
             $("calc")[0].scrollIntoView(true);
         }
     </script>
+    <script langauage="JavaScript" type="text/javascript">
+        function formatReturns(returns) {
+            return String(returns.realReturn.toFixed(2)) + " (real), " + String(returns.nominalReturn.toFixed(2) + " (nominal)");
+        }
+    </script>
     <script language="javascript" type="text/javascript">
         function calcFunct() {
             var income = document.getElementById('income').value;
@@ -73,22 +78,23 @@
                 document.getElementById("result-cost-hours").innerHTML = String(priceinhours.toFixed(2));
 
                 //Stock Investment Returns
-                document.getElementById("value-inv-sp5").innerHTML = String(valueIfInvestedStock5.toFixed(2));
-                document.getElementById("value-inv-sp10").innerHTML = String(valueIfInvestedStock10.toFixed(2));
-                document.getElementById("value-inv-sp20").innerHTML = String(valueIfInvestedStock20.toFixed(2));
-                document.getElementById("value-inv-sp30").innerHTML = String(valueIfInvestedStock30.toFixed(2));
+                document.getElementById("value-inv-sp5").innerHTML = formatReturns(valueIfInvestedStock5);
+                document.getElementById("value-inv-sp10").innerHTML = formatReturns(valueIfInvestedStock10);
+                document.getElementById("value-inv-sp20").innerHTML = formatReturns(valueIfInvestedStock20);
+                document.getElementById("value-inv-sp30").innerHTML = formatReturns(valueIfInvestedStock30);
 
                 //ST Bond Investment Returns
-                document.getElementById("value-inv-st5").innerHTML = String(valueIfInvestedST5.toFixed(2));
-                document.getElementById("value-inv-st10").innerHTML = String(valueIfInvestedST10.toFixed(2));
-                document.getElementById("value-inv-st20").innerHTML = String(valueIfInvestedST20.toFixed(2));
-                document.getElementById("value-inv-st30").innerHTML = String(valueIfInvestedST30.toFixed(2));
+                document.getElementById("value-inv-st5").innerHTML = formatReturns(valueIfInvestedST5);
+                document.getElementById("value-inv-st10").innerHTML = formatReturns(valueIfInvestedST10);
+                document.getElementById("value-inv-st20").innerHTML = formatReturns(valueIfInvestedST20);
+                document.getElementById("value-inv-st30").innerHTML = formatReturns(valueIfInvestedST30);
 
                 //IT Bond Investment Returns
-                document.getElementById("value-inv-it5").innerHTML = String(valueIfInvestedIT5.toFixed(2));
-                document.getElementById("value-inv-it10").innerHTML = String(valueIfInvestedIT10.toFixed(2));
-                document.getElementById("value-inv-it20").innerHTML = String(valueIfInvestedIT20.toFixed(2));
-                document.getElementById("value-inv-it30").innerHTML = String(valueIfInvestedIT30.toFixed(2));
+                document.getElementById("value-inv-it5").innerHTML = formatReturns(valueIfInvestedIT5);
+                document.getElementById("value-inv-it10").innerHTML = formatReturns(valueIfInvestedIT10);
+                document.getElementById("value-inv-it20").innerHTML = formatReturns(valueIfInvestedIT20);
+                document.getElementById("value-inv-it30").innerHTML = formatReturns(valueIfInvestedIT30);
+
                 document.getElementById("tempresults").style.display = "none";
                 document.getElementById("allresults").style.display = "block";
             }
