@@ -69,12 +69,18 @@ function averageReturnsIfInvestedSP500(realPrice, years) {
      * 9.60 Geometric Return from 1928 - 2014 for S&P500
      * http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html
      *
+     * 3.07% Geometric Inflation from 1928 - 2014 for Short Term US Dollar
+     * http://data.bls.gov/cgi-bin/cpicalc.pl
+     *
      * Compound interest = P (1 + rate) ^ years if compounding annually
      * @type {number}
      */
     realPrice = parseFloat(realPrice);
     years = parseFloat(years);
-    return realPrice * Math.pow(((1 + 0.096)), years);
+    return {
+        realReturn: realPrice * Math.pow(((1 + 0.096 - 0.0307)), years),
+        nominalReturn: realPrice * Math.pow(((1 + 0.096)), years)
+    };
 }
 
 function averageReturnsIfInvestedSTT(realPrice, years) {
@@ -82,12 +88,18 @@ function averageReturnsIfInvestedSTT(realPrice, years) {
      * 3.49% Geometric Return from 1928 - 2014 for Short Term Treasuries
      * http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html
      *
+     * 3.07% Geometric Inflation from 1928 - 2014 for Short Term US Dollar
+     * http://data.bls.gov/cgi-bin/cpicalc.pl
+     *
      * Compound interest = P (1 + rate) ^ years if compounding annually
      * @type {number}
      */
     realPrice = parseFloat(realPrice);
     years = parseFloat(years);
-    return realPrice * Math.pow(((1 + 0.0349)), years);
+    return {
+        realReturn: realPrice * Math.pow(((1 + 0.0349 - 0.0307)), years),
+        nominalReturn: realPrice * Math.pow(((1 + 0.0349)), years)
+    };
 }
 
 function averageReturnsIfInvestedITT(realPrice, years) {
@@ -95,10 +107,16 @@ function averageReturnsIfInvestedITT(realPrice, years) {
      * 5.00% Geometric Return from 1928 - 2014 for intermediate term (10 Year) Treasuries
      * http://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html
      *
+     * 3.07% Geometric Inflation from 1928 - 2014 for Short Term US Dollar
+     * http://data.bls.gov/cgi-bin/cpicalc.pl
+     *
      * Compound interest = P (1 + rate) ^ years if compounding annually
      * @type {number}
      */
     realPrice = parseFloat(realPrice);
     years = parseFloat(years);
-    return realPrice * Math.pow(((1 + 0.05)), years);
+    return {
+        realReturn: realPrice * Math.pow(((1 + 0.05 - 0.0307)), years),
+        nominalReturn: realPrice * Math.pow(((1 + 0.05)), years)
+    };
 }
